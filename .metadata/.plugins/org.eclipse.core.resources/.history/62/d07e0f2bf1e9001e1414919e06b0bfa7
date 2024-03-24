@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <servlet>
+	<servlet-name>techcrack</servlet-name>
+	<servlet-class>com.techcrack.Voter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>techcrack</servlet-name>
+	<url-pattern>/voter</url-pattern>
+  </servlet-mapping>
+  <servlet>
+	<servlet-name>Dharani</servlet-name>
+	<servlet-class>com.techcrack.NotEligible</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>Dharani</servlet-name>
+	<url-pattern>/no-vote</url-pattern>
+  </servlet-mapping>
+  <
+</web-app>

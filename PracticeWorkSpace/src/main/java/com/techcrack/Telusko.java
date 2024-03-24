@@ -1,0 +1,29 @@
+package com.techcrack;
+import javax.servlet.http.HttpServlet;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.annotation.WebServlet;
+
+import java.io.IOException;
+
+import javax.servlet.http.Cookie;
+
+@WebServlet("/telusko")
+public class Telusko extends HttpServlet {
+	public void service(HttpServletRequest rq,HttpServletResponse re) {
+		int n=Integer.parseInt(rq.getParameter("n"));
+		int m=Integer.parseInt(rq.getParameter("m"));
+		int k=n+m;
+		try {
+			/*Cookie cookie=new Cookie("k",k+"");
+			re.addCookie(cookie);*/
+			HttpSession hs=rq.getSession();
+			hs.setAttribute("k",k);
+			re.sendRedirect("Shabbas");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

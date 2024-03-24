@@ -1,0 +1,46 @@
+package com.techcrack;
+
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class LogInUser extends HttpServlet {
+	public LogInUser() {
+		super();
+	}
+	@Override
+	public void doPost(HttpServletRequest rq,HttpServletResponse rs) {
+		PrintWriter pw=null;
+		try {
+			pw=rs.getWriter();
+			String userName=rq.getParameter("userName");
+			String passWord=rq.getParameter("passWord");
+			//pw.println(userName+" "+passWord);
+			DataBaseConnection dbc=new DataBaseConnection("root","KavinDharani@3");
+			ResultSet rs1=dbc.dataFromDataBase("SELECT userName,passWord FROM websitetable");
+			System.out.println(userName);
+			while(rs1.next()) {
+				System.out.println(rs1.getString(1));
+				if(rs1.getString(1).equalsIgnoreCase(userName)) {
+					if(rs1.getString(2).equals(passWord)) {
+						pw.println("Login Success Fully");
+					}
+					else {
+						pw.println("Wrong PassWord!!!");
+					}
+					System.out.println(rs1.getString(1));
+					return;
+				}
+			}
+			pw.println("Invalid User Id..");
+		}
+		catch(Exception e) {
+			pw.println("Something Unsual Check the Details Again!! "+e);
+		}
+	}
+
+}

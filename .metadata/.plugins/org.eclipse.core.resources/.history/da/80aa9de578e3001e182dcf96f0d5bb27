@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>AdvCalculator</title>
+		<style>
+		.submit{
+		color:white;
+		background-color:blue;
+		}
+		</style>
+	</head>
+	<body>
+		<p>
+			Designed by techcrack Team??
+		</p>
+		<form action="subtraction">
+			Enter the first Number : <input type="text" name="number1"><br>
+			Enter the Second Number : <input type="text" name="number2"><br>
+			<input type="submit">
+		</form>
+	</body>
+</html>

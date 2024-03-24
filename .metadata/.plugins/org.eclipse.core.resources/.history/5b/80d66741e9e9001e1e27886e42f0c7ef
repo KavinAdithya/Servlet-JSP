@@ -1,0 +1,15 @@
+package com.techcrack;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.Cookie;
+
+public class NotEligible extends HttpServlet{
+	public void service(HttpServletRequest re,HttpServletResponse rs) {
+		int age = Integer.parseInt(re.getParameter("age"));
+	}
+
+}

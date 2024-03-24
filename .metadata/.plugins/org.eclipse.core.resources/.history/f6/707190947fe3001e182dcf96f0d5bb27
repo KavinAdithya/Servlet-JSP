@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>AdvCalculator</title>
+		<style>
+		.submit{
+		color:white;
+		background-color:blue;
+		}
+		</style>
+	</head>
+	<body>
+		
+			Designed by techcrack Team!!
+			Subtraction
+		<form action="subtraction" target="_blank">
+			Enter the first Number : <input type="text" name="number1"><br>
+			Enter the Second Number : <input type="text" name="number2"><br>
+			<input type="submit">
+		</form>
+		Addition
+		<form action="addition" target="_blank">
+			Enter the first Number : <input type="text" name="num1"><br>
+			Enter the Second Number : <input type="text" name="num2"><br>
+			<input type="submit">
+		</form>
+		Multiplication
+		<form action="multiplication" target="_blank">
+			Enter the first Number : <input type="text" name="numbr1"><br>
+			Enter the Second Number : <input type="text" name="numbr2"><br>
+			<input type="submit">
+		</form>
+		Division
+		<form action="division" target="_blank">
+			Enter the first Number : <input type="text" name="nuber1"><br>
+			Enter the Second Number : <input type="text" name="nuber2"><br>
+			<input type="submit">
+		</form>
+	</body>
+</html>

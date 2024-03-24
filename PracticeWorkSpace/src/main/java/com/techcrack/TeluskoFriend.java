@@ -1,0 +1,38 @@
+package com.techcrack;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.ServletContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.ServletConfig;
+
+@WebServlet("/Shabbas")
+public class TeluskoFriend extends HttpServlet{
+	public void service(HttpServletRequest rq,HttpServletResponse re) {
+		try {
+			PrintWriter pw=re.getWriter();
+			//int n=Integer.parseInt(rq.getParameter("k"));
+			int n=0;
+//			Cookie cookie[]=rq.getCookies();
+//			for(Cookie cook:cookie) {
+//				if(cook.getName().equals("k")) {
+//					n=Integer.parseInt(cook.getValue());
+//				}
+//			}
+//			ServletContext sc=getServletContext();
+//			ServletConfig scon=getServletConfig();
+//			pw.println("Hi "+sc.getInitParameter("name")+"</br> Age is "+sc.getInitParameter("Age")+"</br> He is Wife is "+scon.getInitParameter("Kavin"));
+			HttpSession hs=rq.getSession();
+			n=(int)hs.getAttribute("k");
+			pw.println("Square of Addition Of two Number is : "+(n*n));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

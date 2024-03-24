@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+.amazon-para{
+	color:green;
+	font-size:38px;
+}
+.amount-para{
+	font-size:20px;
+}

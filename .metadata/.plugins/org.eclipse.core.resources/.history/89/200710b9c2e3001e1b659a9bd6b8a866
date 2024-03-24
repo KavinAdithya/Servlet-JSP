@@ -1,0 +1,7 @@
+package com.techcrack;
+
+import javax.servlet.http.HttpServlet;
+
+public class PayPal extends HttpServlet {
+
+}

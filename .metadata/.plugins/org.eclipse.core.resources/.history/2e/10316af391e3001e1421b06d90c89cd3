@@ -1,0 +1,19 @@
+package com.techcrack;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
+
+public class Division extends HttpServlet{
+	public void service(HttpServletRequest re,HttpServletResponse rp) {
+		try {
+			rp.getWriter().println(re.getAttribute("KK")+"IN division"+re.getParameter("k"));//Object Return
+			//rp.getWriter().println("The Division is "+(Integer.parseInt(re.getParameter("number1"))/Integer.parseInt(re.getParameter("number2"))));
+		} catch (NumberFormatException | IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

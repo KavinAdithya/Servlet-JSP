@@ -1,0 +1,19 @@
+package com.techcrack;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
+
+public class Multipplication extends HttpServlet{
+	public void service(HttpServletRequest rpe,HttpServletResponse rpm) {
+		try {
+			rpm.getWriter().println("KavinDharani");
+			rpm.getWriter().println("The Multiplication is "+(Integer.parseInt(rpe.getParameter("number1"))*Integer.parseInt(rpe.getParameter("number2"))));
+		} catch (NumberFormatException | IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

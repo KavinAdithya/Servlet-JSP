@@ -1,0 +1,36 @@
+package com.techcrack;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class SignInUser extends HttpServlet{
+	public void service(HttpServletRequest hs,HttpServletResponse re) {
+		PrintWriter pw=null;
+		try {
+			pw=re.getWriter();
+			DataBaseConnection dbc=new DataBaseConnection("root","KavinDharani@3");
+			ResultSet rs=dbc.dataFromDataBase("SELECT username FROM music");
+			String user=hs.getParameter("");
+			while(rs.next()) {
+				if(rs.getString(1).equalsIgnoreCase())
+			}
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+
+	<servlet>
+		<servlet-name>telusko</servlet-name>
+		<servlet-class>com.techcrack.Telusko</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>telusko</servlet-name>
+		<url-pattern>/telusko</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>teluskoFriend</servlet-name>
+		<servlet-class>com.techcrack.TeluskoFriend</servlet-class>
+				<init-param>
+			<param-name>
+				Kavin
+			</param-name>
+			<param-value>
+				Dharani
+			</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>teluskoFriend</servlet-name>
+		<url-pattern>/Shabbas</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>
+			name
+		</param-name>
+		<param-value>
+			KavinDharani@3
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>
+			Age
+		</param-name>
+		<param-value>
+			20
+		</param-value>
+	</context-param>
+</web-app>

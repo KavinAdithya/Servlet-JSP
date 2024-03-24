@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+.amazon-para{
+	color:rgb(0, 0, 255);
+	text-align:center;
+	margin-top:0;
+	font-size:38px;
+	font-family:Arial;
+	font-weight:bold;
+}
+.design-para{
+	font-family:Arial;
+	fonnt-weight:bold;
+	margin-top:0;
+	padding-left:400px;
+	text-align:center;
+}
+.amount-para{
+	font-size:20px;
+}

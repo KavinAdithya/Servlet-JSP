@@ -1,0 +1,28 @@
+package com.techcrack;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class DataBaseConnection {
+	private String dataBase=null;
+	private String userName=null;
+	private String passWord=null;
+	private String URL="jdbc:mysql://localhost:3306/";
+	public DataBaseConnection(String dataBase,String userName,String passWord){
+		this.dataBase=dataBase;
+		this.userName=userName;
+		this.passWord=passWord;
+		startTheConnection();
+	}
+	private boolean startTheConnection() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		}
+		return true;
+	}
+	
+}

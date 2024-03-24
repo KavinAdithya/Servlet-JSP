@@ -1,0 +1,64 @@
+package com.techcrack;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class SignInUser extends HttpServlet{
+	public void service(HttpServletRequest hs,HttpServletResponse re) {
+		mainBranch(hs,re);
+	}
+	public void mainBranch(HttpServletRequest hs,HttpServletResponse re) {
+		PrintWriter pw=null;
+		try {
+			pw=re.getWriter();
+			DataBaseConnection dbc=new DataBaseConnection("root","KavinDharani@3");
+			String user=hs.getParameter("user-name");
+			if(knowYourUserIsPresent(user,dbc,pw)) {
+				sendDataToDataBase(hs,re,dbc,pw);
+				return;
+			}
+			else {
+				pw.println("UserName Must Be Unique Try Again!!!");
+				return ;
+			}
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void sendDataToDataBase(HttpServletRequest hs,HttpServletResponse re,DataBaseConnection dbc,PrintWriter pw) {
+		if(gamilChecker(hs.getParameter("gmail")){
+			if(hs.getParameter("passWord").equals(hs.getParameter("repass"))) {
+				
+			}
+			else {
+				pw.println("PassWord Does Not Match!!!");
+				pw.println("Try a Again After a While!!!");
+			}
+		}
+		else 
+			pw.println("Invalid Email Id \n Try To sign In Again After A while!!!");
+	}
+	public boolean knowYourUserIsPresent(String user,DataBaseConnection dbc,PrintWriter pw) throws SQLException {
+		ResultSet rs=dbc.dataFromDataBase("SELECT username FROM music");
+		while(rs.next()) {
+			if(rs.getString(1).equalsIgnoreCase(user))
+					return false;
+		}
+		return true;
+	}
+
+}
