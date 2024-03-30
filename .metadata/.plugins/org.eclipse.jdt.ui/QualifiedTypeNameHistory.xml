@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.servlet.HttpConstraintElement"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpFilter"/>
+    <fullyQualifiedTypeName name="com.techcrack.JDBC"/>
 </qualifiedTypeNameHistroy>

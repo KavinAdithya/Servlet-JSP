@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Filter"/>
 			<item value="com.techcrack.PRACTISE.WEB.JSP"/>
 			<item value="com.techcrack.practice"/>
 			<item value="com.techcrack.PacticeJSP"/>
@@ -12,6 +13,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="com.techcrack.filter"/>
 			<item value="PRACTISEWEBJSP"/>
 			<item value="Practise"/>
 			<item value="PracticeJSP"/>
