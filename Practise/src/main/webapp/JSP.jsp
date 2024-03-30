@@ -1,6 +1,6 @@
 <%-- Directive Tag --%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" errorPage="ErrorPage.jsp"%>
+    pageEncoding="ISO-8859-1" errorPage="ErrorPage.jsp" %>
 			
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql"  prefix="sql"%>
 
@@ -104,7 +104,7 @@
 <%--Using Inbuilt tags for String Operations --%>
 
 				
-			<c:set var="name" value="  Kavin Loves Her(Dharani) Moree       "/>	
+			<%--<c:set var="name" value="  Kavin Loves Her(Dharani) Moree       "/>	
 			Length of the Sentence is  ${fn:length(name)}	
 			
 			<c:forEach items="${fn:split(name,' ')}" var="s"> ${s}<br></c:forEach>	
@@ -121,7 +121,20 @@
 			
 			${fn:toLowerCase(name)}<br>
 			
-			${fn:trim(name)}
+			${fn:trim(name)}--%>
+			
+			
+			<%
+				
+			%>
+			
+			<c:set var="stud" value="${request.getAttribute(\"students\")}"/>
+			
+			<c:forEach items="${students}" var="s">${s.name}
+			<br/></c:forEach>	
+			
+			${students}
+						
 			
 			
 		</body>

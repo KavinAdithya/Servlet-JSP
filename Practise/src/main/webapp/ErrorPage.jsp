@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Something Went WRong
+Something Went Wrong
 <%=exception.getMessage() %>
 </body>
 </html>
