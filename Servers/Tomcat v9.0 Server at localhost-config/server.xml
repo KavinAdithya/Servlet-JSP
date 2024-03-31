@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="PracticeJSP" path="/PracticeJSP" reloadable="true" source="org.eclipse.jst.jee.server:PracticeJSP"/><Context docBase="Practise" path="/Practise" reloadable="true" source="org.eclipse.jst.jee.server:Practise"/><Context docBase="WEB" path="/WEB" reloadable="true" source="org.eclipse.jst.jee.server:WEB"/><Context docBase="Filter" path="/com.techcrack.filter" reloadable="true" source="org.eclipse.jst.jee.server:Filter"/></Host>
+      <Context docBase="PracticeJSP" path="/PracticeJSP" reloadable="true" source="org.eclipse.jst.jee.server:PracticeJSP"/><Context docBase="Practise" path="/Practise" reloadable="true" source="org.eclipse.jst.jee.server:Practise"/><Context docBase="WEB" path="/WEB" reloadable="true" source="org.eclipse.jst.jee.server:WEB"/><Context docBase="Filter" path="/com.techcrack.filter" reloadable="true" source="org.eclipse.jst.jee.server:Filter"/><Context docBase="SecurityToWebPage" path="/SecurityToWebPage" reloadable="true" source="org.eclipse.jst.jee.server:SecurityToWebPage"/></Host>
     </Engine>
   </Service>
 </Server>
