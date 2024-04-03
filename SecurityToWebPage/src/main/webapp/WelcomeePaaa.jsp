@@ -8,10 +8,14 @@
 	</head>
 	<body>
 		<%
+			response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+			response.setHeader("Pragma","no-cache");
+			response.setHeader("Expires","0");
 			if(request.getParameter("name")==null)
 				response.sendRedirect("WelcomePage.html");
-			session.setAttribute("name","kavin");
+			session.setAttribute("name",request.getParameter("name"));
 		%>
+		${name}
 		WelcomE KaVin_AdithYa_KavinDharani...
 		<a href="AboutUs.jsp">About us.</a>	
 		<a href="Videopage.jsp">Video</a>
