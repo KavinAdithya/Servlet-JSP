@@ -2,6 +2,7 @@ package demo;
 
 import java.io.IOException;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,9 +19,14 @@ public class Handler2 extends HttpServlet{
 	public void service(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("Reached Service Method in Handler2");
 		
+		request.setAttribute("name", "KaVinDharani");
+		
+		
 		try {
-			response.getWriter().println("<p style = \"font-size:200px;\"> Kavin Adithya Dharani </p>");
-		} catch (IOException e) {
+			response.getWriter().println("<p style = \"font-size:200px;\"> Kavin Adithya Dharani </p>" + request.getAttribute("username"));
+//			request.getRequestDispatcher("/jsp/home.jsp").forward(request, response);
+//		} catch (IOException | ServletException e) {
+		}catch(Exception e ) {
 			e.printStackTrace();
 		}
 	}
